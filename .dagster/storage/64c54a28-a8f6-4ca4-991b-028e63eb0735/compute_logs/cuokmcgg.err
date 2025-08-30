@@ -1,7 +1,0 @@
-[32m2025-08-26 19:34:53 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 64c54a28-a8f6-4ca4-991b-028e63eb0735 - 7266 - LOGS_CAPTURED - Started capturing logs in process (pid: 7266).
-[32m2025-08-26 19:34:53 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 64c54a28-a8f6-4ca4-991b-028e63eb0735 - 7266 - leer_datos - STEP_START - Started execution of step "leer_datos".
-[32m2025-08-26 19:35:00 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 64c54a28-a8f6-4ca4-991b-028e63eb0735 - 7266 - leer_datos - STEP_OUTPUT - Yielded output "result" of type "DataFrame". (Type check passed).
-[32m2025-08-26 19:35:00 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 64c54a28-a8f6-4ca4-991b-028e63eb0735 - leer_datos - Writing file at: /workspaces/COVID3/.dagster/storage/leer_datos using PickledObjectFilesystemIOManager...
-[32m2025-08-26 19:35:04 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 64c54a28-a8f6-4ca4-991b-028e63eb0735 - 7266 - leer_datos - ASSET_MATERIALIZATION - Materialized value leer_datos.
-[32m2025-08-26 19:35:04 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 64c54a28-a8f6-4ca4-991b-028e63eb0735 - 7266 - leer_datos - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
-[32m2025-08-26 19:35:04 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 64c54a28-a8f6-4ca4-991b-028e63eb0735 - 7266 - leer_datos - STEP_SUCCESS - Finished execution of step "leer_datos" in 10.71s.
