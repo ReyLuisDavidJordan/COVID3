@@ -1,0 +1,7 @@
+# load_from indica desde dónde Dagster debe cargar los assets o jobs
+load_from:
+  - python_file:  # Se está cargando un archivo Python como fuente de definición de assets
+      relative_path: "covid_eda/scripts/eda_covid.py"  
+      # Ruta relativa al directorio de trabajo actual o al workspace de Dagster
+      # Este archivo debe contener las definiciones de @asset, @op o jobs
+      # En tu caso, contiene todos los assets de análisis COVID

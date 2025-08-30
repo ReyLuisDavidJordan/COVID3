@@ -1,0 +1,8 @@
+run_launcher:
+  module: dagster._core.launcher.default_run_launcher
+  class: DefaultRunLauncher
+  config: {}
+
+storage:
+  sqlite:
+    base_dir: /workspaces/COVID3/.dagster/storage

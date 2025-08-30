@@ -1,0 +1,23 @@
+# Dagster (orquestador de datos) - versión mínima 1.2.0
+dagster>=1.2.0
+
+# Interfaz web de Dagster para monitorear y ejecutar pipelines
+dagster-webserver>=1.2.0
+
+# Herramienta de línea de comandos para gestionar proyectos en Dagster
+dagster-dg-cli>=1.2.0
+
+# Librería para manipulación y análisis de datos en Python
+pandas>=1.5.0
+
+# Soporte para manejo de datos en formato Parquet y Arrow
+pyarrow>=12.0.0
+
+# Librería para leer y escribir archivos Excel (.xlsx)
+openpyxl>=3.1.2
+
+# Librería para hacer solicitudes HTTP (descarga de datos de la web, APIs, etc.)
+requests>=2.31.0
+
+# Plugin para crear proyectos con la estructura de Dagster de forma sencilla
+create-dagster>=0.0.8

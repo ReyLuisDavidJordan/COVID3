@@ -1,0 +1,35 @@
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - LOGS_CAPTURED - Started capturing logs in process (pid: 33171).
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - reporte_excel_covid - STEP_START - Started execution of step "reporte_excel_covid".
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - reporte_excel_covid - Loading file from: /workspaces/COVID3/.dagster/storage/datos_procesados using PickledObjectFilesystemIOManager...
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - reporte_excel_covid - LOADED_INPUT - Loaded input "datos_procesados" using input manager "io_manager", from output "result" of step "datos_procesados"
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - reporte_excel_covid - Loading file from: /workspaces/COVID3/.dagster/storage/metrica_factor_crec_7d using PickledObjectFilesystemIOManager...
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - reporte_excel_covid - LOADED_INPUT - Loaded input "metrica_factor_crec_7d" using input manager "io_manager", from output "result" of step "metrica_factor_crec_7d"
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - reporte_excel_covid - Loading file from: /workspaces/COVID3/.dagster/storage/metrica_incidencia_7d using PickledObjectFilesystemIOManager...
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - reporte_excel_covid - LOADED_INPUT - Loaded input "metrica_incidencia_7d" using input manager "io_manager", from output "result" of step "metrica_incidencia_7d"
+[32m2025-08-29 22:16:33 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - reporte_excel_covid - STEP_INPUT - Got input "datos_procesados" of type "DataFrame". (Type check passed).
+[32m2025-08-29 22:16:34 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - reporte_excel_covid - STEP_INPUT - Got input "metrica_factor_crec_7d" of type "DataFrame". (Type check passed).
+[32m2025-08-29 22:16:34 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - reporte_excel_covid - STEP_INPUT - Got input "metrica_incidencia_7d" of type "DataFrame". (Type check passed).
+[32m2025-08-29 22:16:34 +0000[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 2e794b79-1045-4d29-9ff3-fdf80aa456c2 - 33171 - reporte_excel_covid - STEP_FAILURE - Execution of step "reporte_excel_covid" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "reporte_excel_covid"::
+
+ModuleNotFoundError: No module named 'xlsxwriter'
+
+Stack Trace:
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/workspaces/COVID3/covid_eda/scripts/eda_covid.py", line 385, in reporte_excel_covid
+    with pd.ExcelWriter(filename, engine="xlsxwriter") as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/io/excel/_xlsxwriter.py", line 197, in __init__
+    from xlsxwriter import Workbook
+[0m
